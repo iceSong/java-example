@@ -11,6 +11,7 @@
     <modules>
         <module>functional-programming</module>
         <module>skills</module>
+        <module>currying</module>
     </modules>
     <dependencies>
         <dependency>

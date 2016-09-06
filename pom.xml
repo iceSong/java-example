@@ -13,6 +13,7 @@
         <module>skills</module>
         <module>currying</module>
         <module>bean-map</module>
+        <module>lombok</module>
     </modules>
     <dependencies>
         <dependency>

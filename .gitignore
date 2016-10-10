@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+bean-map/bean-map.iml
+currying/currying.iml
+functional-programming/functional-programming.iml
+java-example.iml
+lombok/lombok.iml
+skills/skills.iml
+thread-local/src/main/resources/
+thread-local/src/test/
+thread-local/thread-local.iml

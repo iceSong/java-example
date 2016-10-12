@@ -15,7 +15,7 @@ public enum Sleeper {
 
     private final int seconds;
 
-    private Sleeper(int seconds){
+    Sleeper(int seconds){
         this.seconds = seconds;
     }
 

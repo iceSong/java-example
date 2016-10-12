@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
  */
 public class Application {
     public static void main(String[] args){
-        /** first */
+        /* first */
         HigherOrderRunnable higherOrderRunnable = (Runnable... runnables) -> {
             Runnable result = new Runnable() {
                 @Override
@@ -27,7 +27,7 @@ public class Application {
             return result;
         };
 
-        /** second */
+        /* second */
         HigherOrderRunnable h2 = (Runnable... runnables) -> {
             Runnable r = () -> {
                 for(Runnable rn: runnables){
@@ -37,7 +37,7 @@ public class Application {
             return  r;
         };
 
-        /** third */
+        /* third */
         HigherOrderRunnable h3 = (Runnable... runnables) -> {
             Runnable result = () ->{
                 Arrays.stream(runnables).forEach(Runnable::run);
@@ -46,18 +46,18 @@ public class Application {
         };
 
 
-        /** fourth implement the functional interface */
+        /* fourth implement the functional interface */
         HigherOrderRunnable h4 = runnables -> () -> Arrays.stream(runnables).forEach(Runnable::run);
         Runnable ru = h4.combine(()->System.out.println("runnable1"), ()->System.out.println("runnable2"), ()->System.out.println("runnable3"));
         ru.run();
 
 
-        /** use HigherOrderRunnable to test Sleeper */
+        /* use HigherOrderRunnable to test Sleeper */
         Runnable ru2 = h4.combine(Sleeper.TWO::sleep, Sleeper.THREE::sleep, Sleeper.FOUR::sleep, Sleeper.FIVE::sleep);
         ru2.run();  //execute sequentially
 
 
-        /** fifth parallel execution */
+        /* fifth parallel execution */
         HigherOrderRunnable h5 = runnables -> () ->{
             try{
                 CountDownLatch latch = new CountDownLatch(runnables.length);

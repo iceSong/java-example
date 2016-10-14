@@ -22,5 +22,25 @@ public class Application {
         }catch (Exception e){
             System.out.println(OS_NAME);
         }
+
+        MathOperation add = (x, y) -> x + y;
+
+        System.out.println(add.operation(1,2));
+
+        String str1 = null;
+        if("song".equals(str1)){
+            System.out.println("hh");
+        }else {
+            System.out.println("string on the left side of equals can prevent null point exception");
+        }
     }
+
+
+}
+
+/**
+ * 数学运算操作接口
+ */
+interface MathOperation {
+    int operation(int a, int b);
 }

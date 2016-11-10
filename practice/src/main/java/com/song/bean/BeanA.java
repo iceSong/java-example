@@ -7,6 +7,16 @@ package com.song.bean;
  * @date 2016-10-14 15:26
  */
 public class BeanA {
+    private String a;
+
+    public String getA() {
+        return a;
+    }
+
+    public void setA(String a) {
+        this.a = a;
+    }
+
     public int strSwitchTest(String key) {
         int flag;
         switch (key){

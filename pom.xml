@@ -15,6 +15,7 @@
         <module>bean-map</module>
         <module>lombok</module>
         <module>thread-local</module>
+        <module>performance-verify</module>
     </modules>
     <dependencies>
         <dependency>
